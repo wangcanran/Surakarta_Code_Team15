@@ -76,17 +76,17 @@ private:
     NetworkSocket *socket;
 
 private slots:
-    void connected_successfully();
-    void connectToServer();
-    void disconnectFromServer();
-    void sendMessage();
-    void receiveMessage(NetworkData);
-    void sendReady();
-    void receiveReady(NetworkData);
-    void receiveMove(NetworkData);
-    void MyMove(NetworkData);
-    void receiveReject(NetworkData);
-    void receiveEnd(NetworkData);
+    void connected_successfully();//连接成功
+    void connectToServer();//与server连接
+    void disconnectFromServer();//断开连接
+    void sendMessage();//发消息
+    void receiveMessage(NetworkData);//接收消息
+    void sendReady();//发送Ready_OP
+    void receiveReady(NetworkData);//接收Ready_OP并开始游戏
+    void receiveMove(NetworkData);//接收MOVE_OP并启动画
+    void MyMove(NetworkData);//启动自己的行棋动画
+    void receiveReject(NetworkData);//拒绝一起游戏
+    void receiveEnd(NetworkData);//接收END_OP
 
     void mouseReleaseEvent(QMouseEvent *ev);
     void TimeButton();
@@ -96,12 +96,12 @@ private slots:
     void WinnerIs(PieceColor color);
     void CleanWinner();
     void Giveup();
-    void Move_non(int i,QPoint from,QPoint to);
-    void Move(int i,QPoint from,QPoint to,int array[4]);
-    void useAI();
-    void stopAI();
-    void sendMove_Ai();
-    void gameMove();
+    void Move_non(int i,QPoint from,QPoint to);//不吃子动画实现
+    void Move(int i,QPoint from,QPoint to,int array[4]);//吃子动画实现
+    void useAI();//AI托管
+    void stopAI();//结束AI托管
+    void sendMove_Ai();//发送MOVE的信息
+    void gameMove();//更新棋盘
 };
 
 #endif // CLIENT_H

@@ -19,7 +19,6 @@ public:
 };
 
 
-// Simple board, based on 2D vector of chess color
 class SurakartaSimpleBoard {
 public:
     std::vector<std::vector<PieceColor>> data_;
@@ -47,7 +46,6 @@ private:
 };
 
 
-// Node for MCTS Algorithm
 class MNode {
 public:
     // Node info
