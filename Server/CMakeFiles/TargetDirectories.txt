@@ -1,0 +1,9 @@
+C:/Users/29352/Desktop/myqt/QtNetworkDemo/ServerDemo/src/CMakeFiles/ServerDemo.dir
+C:/Users/29352/Desktop/myqt/QtNetworkDemo/ServerDemo/src/CMakeFiles/edit_cache.dir
+C:/Users/29352/Desktop/myqt/QtNetworkDemo/ServerDemo/src/CMakeFiles/rebuild_cache.dir
+C:/Users/29352/Desktop/myqt/QtNetworkDemo/ServerDemo/src/CMakeFiles/list_install_components.dir
+C:/Users/29352/Desktop/myqt/QtNetworkDemo/ServerDemo/src/CMakeFiles/install.dir
+C:/Users/29352/Desktop/myqt/QtNetworkDemo/ServerDemo/src/CMakeFiles/install/local.dir
+C:/Users/29352/Desktop/myqt/QtNetworkDemo/ServerDemo/src/CMakeFiles/install/strip.dir
+C:/Users/29352/Desktop/myqt/QtNetworkDemo/ServerDemo/src/CMakeFiles/ServerDemo_autogen_timestamp_deps.dir
+C:/Users/29352/Desktop/myqt/QtNetworkDemo/ServerDemo/src/CMakeFiles/ServerDemo_autogen.dir
