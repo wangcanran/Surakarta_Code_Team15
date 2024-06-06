@@ -28,46 +28,46 @@ public:
     explicit PVPgame(QWidget *parent = nullptr);
     ~PVPgame();
     void paintEvent(QPaintEvent *);
-    SurakartaGame game;
+    SurakartaGame game;//新游戏
     std::shared_ptr<const SurakartaBoard> board_;
     std::shared_ptr<const SurakartaGameInfo> game_info_;
     unsigned int board_size_;
-    QPoint press;
-    QPoint release;
-    int flag,flag2;
-    QLCDNumber *lcd_B;
-    QLCDNumber *lcd_W;
-    QLCDNumber *lcd_num;
-    QTimer *timer;
+    QPoint press;//初始位置
+    QPoint release;//目标位置
+    int flag,flag2;//用来切换处理初始位置和目标位置
+    QLCDNumber *lcd_B;//黑色倒计时显示器
+    QLCDNumber *lcd_W;//白色倒计时显示器
+    QLCDNumber *lcd_num;//步数显示器
+    QTimer *timer;//为调用表的时间间隔计时
     QLabel *label;
-    QLabel *winner_B;
-    QLabel *winner_W;
+    QLabel *winner_B;//显示黑色赢
+    QLabel *winner_W;//显示白色赢
     QPushButton *button;
-    QPushButton lose_W;
-    QPushButton lose_B;
-    QTextEdit *text;
-    int minute,m_;
-    int second,s_;
-    Chess chess[24];
-    QLabel *Chess[24];
-    void init();
-    QPropertyAnimation *m_animation;
+    QPushButton lose_W;//认输
+    QPushButton lose_B;//认输
+    QTextEdit *text;//在这里输入更改的时间限制
+    int minute,m_;//分
+    int second,s_;//秒
+    Chess chess[24];//棋子
+    QLabel *Chess[24];//棋子显示
+    void init();//初始化棋子
+    QPropertyAnimation *m_animation;//动画
 private:
     Ui::PVPgame *ui;
 private slots:
-    void BackButton();
-    void NewgameButton();
-    void mouseReleaseEvent(QMouseEvent *ev);
-    void TimeButton();
-    void Clock1();
-    void Clock2();
-    void ResetNum();
-    void WinnerIs(PieceColor color);
+    void BackButton();//返回choose界面
+    void NewgameButton();//新游戏
+    void mouseReleaseEvent(QMouseEvent *ev);//返回鼠标点击位置
+    void TimeButton();//确认输入的更改的时间限制
+    void Clock1();//黑色计时器
+    void Clock2();//白色计时器
+    void ResetNum();//重置步数
+    void WinnerIs(PieceColor color);//显示谁赢了
     void CleanWinner();
-    void LoseBlack();
-    void LoseWhite();
-    void Move_non(int i);
-    void Move(int i);
+    void LoseBlack();//认输
+    void LoseWhite();//认输
+    void Move_non(int i);//不吃子动画
+    void Move(int i);//吃子动画
 };
 
 
